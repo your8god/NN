@@ -1,5 +1,5 @@
 from training import training
-from simple_perceptron import w, perceptron, NUMBERS
+from perceptron import w, perceptron, NUMBERS
 
 
 n = 10000
