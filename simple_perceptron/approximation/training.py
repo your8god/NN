@@ -3,7 +3,7 @@ X
   \
    w(k)
      \
-       (N) -> Y
+       f(kx + c) -> Y
      /
    w(c)
   /
@@ -14,7 +14,7 @@ from random import uniform, choice
 
 
 k, c = [uniform(-5, 5)] * 2
-rate = 0.001 #speed of learning
+n = 0.001 #speed of learning
 
 
 def f(x):
@@ -27,7 +27,7 @@ def trainig(data: dict[float, float]) -> tuple[float, float]:
     for _ in range(100000): #training round
         x = choice(list(data.keys()))
         out = f(x)
-        delta = data[x] - out #val of mistake
-        k += delta * x * rate #w(t + 1) = w(t) + dxn
-        c += delta * 1 * rate
+        d = data[x] - out #val of mistake
+        k += d * x * n #w(t + 1) = w(t) + dxn
+        c += d * 1 * n
     return k, c
