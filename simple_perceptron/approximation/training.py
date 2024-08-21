@@ -13,7 +13,7 @@ X
 from random import uniform, choice
 
 
-k, c = uniform(-5, 5), uniform(-5, 5)
+k, c = uniform(-10, 10), uniform(-10, 10)
 n = 0.001 #speed of learning
 
 
@@ -27,7 +27,7 @@ def trainig(data: dict[float, float]) -> tuple[float, float]:
     for _ in range(1000000): #training round
         x = choice(list(data.keys()))
         out = f(x)
-        d = data[x] - out #val of mistake
+        d = data[x] - out #val of error
         k += d * x * n #w(t + 1) = w(t) + dxn
         c += d * 1 * n
     return k, c
