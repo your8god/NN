@@ -13,7 +13,7 @@ X
 from random import uniform, choice
 
 
-k, c = [uniform(-5, 5)] * 2
+k, c = uniform(-5, 5), uniform(-5, 5)
 n = 0.001 #speed of learning
 
 
@@ -24,7 +24,7 @@ def f(x):
 def trainig(data: dict[float, float]) -> tuple[float, float]:
     """ Finding coef 'k' and 'c' for linear function (y = kx + c) using data"""
     global k, c
-    for _ in range(100000): #training round
+    for _ in range(1000000): #training round
         x = choice(list(data.keys()))
         out = f(x)
         d = data[x] - out #val of mistake

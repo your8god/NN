@@ -19,4 +19,3 @@ print(f'y = {round(k, 2)}x + {round(c, 2)}')
 
 for k, v in data.items():
     print(f'x = {k}, y = {v}, y_r = {f(k)}')
-    
