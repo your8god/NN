@@ -1,19 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from os.path import exists
 
 from rosenblatt import PerceptronRosebblatt
 from adaline import AdaptiveLinearNeuron
 from perceptron import res
 
 
-_TO_DOWNLOAD = False
-
-
 def normalization(data, i):
     return (data - X[:, i].mean()) / X[:, i].std()
 
 
-if _TO_DOWNLOAD:
+if not (exists('X.npy') and exists('y.npy')):
     import download_dataset
 
 with open('X.npy', 'rb') as Xi, \
