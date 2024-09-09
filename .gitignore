@@ -2,6 +2,7 @@
 __pycache__
 
 nn_venv
+.venv
 
 *.csv
 *.npy
