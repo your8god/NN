@@ -1,0 +1,14 @@
+win_powershell:
+
+1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+2. .\venv\Scripts\activate.ps1
+
+
+win_cmd:
+
+1. .\env\Scripts\activate.bat
+
+
+linux/maxOs:
+
+1. source ./env/bin/Activate
