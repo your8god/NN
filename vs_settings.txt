@@ -1,0 +1,32 @@
+VENV SETTINGS:
+
+    win_powershell:
+
+    1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    2. .\venv\Scripts\activate.ps1
+
+
+    win_cmd:
+
+    1. .\env\Scripts\activate.bat
+
+
+    linux/maxOs:
+
+    1. source ./env/bin/Activate
+
+
+IMPORT SETTINGS:
+
+    1. Press Ctrl + Shift + P to open Command Palette
+    2. Go to Users.setting.json
+    3. Add the following line
+        win:
+            "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" }
+        linux:
+            "terminal.integrated.env.linux": { "PYTHONPATH": "${workspaceFolder}" }
+        macOs:
+            "terminal.integrated.env.osx": { "PYTHONPATH": "${workspaceFolder}" }
+
+    Source:
+        https://stackoverflow.com/questions/62366211/vscode-modulenotfounderror-no-module-named-x
