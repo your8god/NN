@@ -5,6 +5,7 @@ from os.path import exists
 from rosenblatt import PerceptronRosebblatt
 from adaline import AdaptiveLinearNeuron
 from perceptron import res
+from download_dataset import download
 
 
 def normalization(data, i):
@@ -12,7 +13,7 @@ def normalization(data, i):
 
 
 if not (exists('X.npy') and exists('y.npy')):
-    import download_dataset
+    download()
 
 with open('X.npy', 'rb') as Xi, \
     open('y.npy', 'rb') as yi:
