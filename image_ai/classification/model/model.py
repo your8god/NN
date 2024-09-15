@@ -14,5 +14,3 @@ class Model(Enum):
     def path(self):
         return r'./image_ai/classification/model/storage/' + self.value
     
-    def __str__(self):
-        return self.value.split('_')[0].split('-')[0].upper()
