@@ -7,4 +7,4 @@ from translate import Translator
 def tr(word):
     t = Translator(from_lang='english', to_lang='russian')
     res = t.translate(word)
-    return res
+    return f'{res} ({word})'

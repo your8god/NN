@@ -1,10 +1,11 @@
 /.DS_Store
 __pycache__
-
 nn_venv
 .venv
+output
 
 *.csv
 *.npy
 *.h5
 *.pth
+*.pt
