@@ -1,3 +1,5 @@
+""" Adaptive Linear Neuron (ADALINE) """
+
 import numpy as np
 
 from perceptron import Perceptron

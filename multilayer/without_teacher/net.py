@@ -1,3 +1,5 @@
+""" Simple neural network """
+
 from sympy import exp, diff, symbols
 import numpy as np
 

@@ -1,3 +1,5 @@
+""" Training of perceptron """
+
 from random import randint
 
 import perceptron as p

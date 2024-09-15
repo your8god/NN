@@ -1,3 +1,5 @@
+""" Simple Neuron """
+
 import numpy as np
 
 

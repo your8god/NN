@@ -1,3 +1,5 @@
+""" Base for different kind of perceptrons"""
+
 import numpy as np
 from abc import abstractmethod, ABC
 
