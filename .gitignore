@@ -7,3 +7,4 @@ nn_venv
 *.csv
 *.npy
 *.h5
+*.pth
