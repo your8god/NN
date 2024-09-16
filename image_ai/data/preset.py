@@ -40,6 +40,7 @@ class VideoStorage(Enum):
     """ Filenames of videos """
     TRAFFIC = '1.mp4'
     BEACH = '2.mp4'
+    CHICKENS = '3.mp4'
     
     @property
     def path(self):
