@@ -1,12 +1,11 @@
 """ Utils for dataset """
 
-from tensorflow import keras
+import os
 import matplotlib.pyplot as plt
+from tensorflow import keras
+from pathlib import Path
 
 from deep_learning import model
-
-
-_FILE = 'model_1.h5'
 
 
 FASHION_KIND = {
@@ -43,10 +42,18 @@ def visualisation(data, ind: int):
 
 
 def save(X, y):
-    my_model = model(X, y)
-    my_model.save(_FILE)
+    if not os.path.exists(_file()):
+        my_model = model(X, y)
+        my_model.save(_file())
     
 
 def load():
-    model = keras.models.load_model(_FILE)
+    model = keras.models.load_model(_file())
     return model
+
+
+def _file() -> Path:
+    cur_path = (Path(__file__).parent / 'data').resolve()
+    if not os.path.exists(cur_path):
+        os.makedirs(cur_path)
+    return cur_path / 'model.h5'

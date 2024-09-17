@@ -9,6 +9,8 @@ X_train = utils.transform(X_train)
 X_test = utils.transform(X_test)
 #utils.visualisation(X_train, 5)
 
+utils.save(X_train, y_train)
+
 my_model = utils.load()
 loss, acc = my_model.evaluate(X_test, y_test)
 print(acc, loss, sep='\n')
