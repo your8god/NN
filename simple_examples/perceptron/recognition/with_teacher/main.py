@@ -5,18 +5,19 @@ from os.path import exists
 from rosenblatt import PerceptronRosebblatt
 from adaline import AdaptiveLinearNeuron
 from perceptron import res
-from download_dataset import download
+from download_dataset import download, makepath
 
 
 def normalization(data, i):
     return (data - X[:, i].mean()) / X[:, i].std()
 
-
-if not (exists('X.npy') and exists('y.npy')):
+x_path = makepath('X')
+y_path = makepath('y')
+if not (exists(x_path) and exists(y_path)):
     download()
 
-with open('X.npy', 'rb') as Xi, \
-    open('y.npy', 'rb') as yi:
+with open(x_path, 'rb') as Xi, \
+    open(y_path, 'rb') as yi:
     X = np.load(Xi)
     y = np.load(yi)
 
