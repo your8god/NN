@@ -7,11 +7,11 @@ import os
 from pathlib import Path
 
 
-def makepath(s: str) -> str:
+def makepath(s: str) -> Path:
     cur_path = (Path(__file__).parent / 'data').resolve()
     if not os.path.exists(cur_path):
         os.makedirs(cur_path)
-    return str(cur_path / f'{s}.npy')
+    return cur_path / f'{s}.npy'
 
 
 def download():

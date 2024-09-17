@@ -1,6 +1,6 @@
 from sklearn.neighbors import KNeighborsClassifier
 
-from fast_travel.scikit_learn.dataset import datasets
+from ai_libraries.scikit_learn.dataset import datasets
 
 
 X_train, X_test, y_train, y_test = datasets()

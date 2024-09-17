@@ -2,7 +2,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Perceptron
 from sklearn import metrics
 
-from fast_travel.scikit_learn.dataset import datasets
+from ai_libraries.scikit_learn.dataset import datasets
 
 X_train, X_test, y_train, y_test = datasets()
 
